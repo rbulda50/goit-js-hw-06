@@ -13,7 +13,6 @@ console.log('Number of categories: ', categoryNumber(elementsList));
 // #Task 2
 
 const listEl = list => {
-    console.log(list)
     const elementsUl = list.querySelectorAll('.item');
 
     elementsUl.forEach(element => {
