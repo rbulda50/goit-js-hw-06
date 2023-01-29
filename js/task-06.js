@@ -5,7 +5,7 @@ const refs = {
 refs.input.addEventListener('blur', isValidInput);
 
 function isValidInput(event) {
-    if (event.currentTarget.value.length >= 6) {
+    if (event.currentTarget.value.length === 6) {
         refs.input.classList.remove('invalid');
         refs.input.classList.add('valid');
     } else {

@@ -14,16 +14,11 @@ const images = [
 ];
 
 const galleryCollection = document.querySelector('.gallery');
-// console.log(galleryCollection);
 
-const addImageToGalleryFromArray = galleryList => {
+const newImage = images
+  .map(({url, alt}) => `<li><img src= ${url} alt=${alt}></li>`)
+  .join('');
 
-  galleryList.forEach(image => {
+galleryCollection.insertAdjacentHTML("afterbegin", newImage);
 
-    galleryCollection.insertAdjacentHTML(
-      "afterbegin",
-      `<img src= ${image.url}, alt=${image.alt}>`);
-  });
-};
 
-addImageToGalleryFromArray(images);
